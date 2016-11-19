@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="leftbar">
+    <a href="#"><h1>rubyslist</h1></a>
+    <ul>
+      <a href="#"><%= link_to 'post a classifieds', new_listing_path %></a>
+      <li>my account</li>
+    </ul>
+    <form>
+      <p>search shiplist</p>
+      <%= form_tag search_listings_path, method: :get do |f| %>
+      <%= text_field_tag :search, nil, placeholder: 'search' %>
+      <%= select_tag :category, options_for_select(Category.all.map{ |c| [c.name, c.id]}) %>
+      <%= submit_tag '>' %>
+      <% end %>
+    </form>
+  </div>
+  <div class="center-column" >
+    <div class="center-one">
+      <table>
+        <tr>
+          <th class="table-header"><%= link_to 'housing', category_path(@housing) %></th>
+        </tr>
+        <tr>
+          <td>
+            <% @housing.subcategories.each do |subcategory| %>
+            <ul class="left-list">
+              <li><%= link_to subcategory.name, category_subcategory_path(@housing, subcategory) %></li>
+            </ul>
+            <% end %>
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th class="table-header"><%= link_to 'roommates', category_path(@roommates) %></th>
+        </tr>
+        <tr>
+          <td>
+            <% @roommates.subcategories.each do |subcategory| %>
+            <ul>
+              <li><%= link_to subcategory.name, category_subcategory_path(@roommates, subcategory) %></li>
+            </ul>
+            <% end %>
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th class="table-header"><%= link_to 'for sale', category_path(@forsale) %></th>
+        </tr>
+        <tr>
+          <td>
+            <% @forsale.subcategories.each do |subcategory| %>
+            <ul class="left-list">
+              <li><%= link_to subcategory.name, category_subcategory_path(@forsale, subcategory) %></li>
+            </ul>
+            <% end %>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="rightbar">
+    <!-- Links to the pages via routes match -->
+    <ul class="rightbar-top">
+      <!-- /help -->
+      <li><%= link_to 'help and faq', help_path%></li>
+      <li><%= link_to 'avoid scams and fraud', scams_path%></li>
+      <li><%= link_to 'personal safety tips', safety_path%></li>
+      <li class="rightbar-top"><%= link_to 'terms of use', terms_path%></li>
+      <li><%= link_to 'privacy policy', privacy_path%></li>
+      <li><%= link_to 'about shiplist', about_path%></li>
+      <li><%= link_to 'contact us', contact_path%></li>
+    </ul>
+  </div>
+</div>
