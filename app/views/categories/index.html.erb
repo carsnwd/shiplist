@@ -5,14 +5,13 @@
       <a href="#"><%= link_to 'post a classifieds', new_listing_path %></a>
       <li>my account</li>
     </ul>
-    <form>
       <p>search shiplist</p>
-      <%= form_tag search_listings_path, method: :get do |f| %>
-      <%= text_field_tag :search, nil, placeholder: 'search' %>
-      <%= select_tag :category, options_for_select(Category.all.map{ |c| [c.name, c.id]}) %>
-      <%= submit_tag '>' %>
+      <%= form_tag search_listings_path, :method => 'get' do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
       <% end %>
-    </form>
   </div>
   <div class="center-column" >
     <div class="center-one">

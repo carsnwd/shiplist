@@ -60,6 +60,7 @@ Rails.application.routes.draw do
     resources :subcategories
   end
 
+  #Performs the search
   resources :listings do
     collection do
       get 'search'
