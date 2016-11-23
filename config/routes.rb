@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -81,4 +83,6 @@ Rails.application.routes.draw do
   match '/privacy', to: 'pages#privacy', via: :get
   match '/terms', to: 'pages#terms', via: :get
   match '/subcategories/find_by_category', to: 'subcategories#find_by_category', via: :post
+  match '/categories/:id', to: 'categories#show', via: :get
+  match '/signup', to: 'users#new', via: :get
 end
