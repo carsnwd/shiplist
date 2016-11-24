@@ -5,22 +5,33 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div>
-    <button type="button">reply</button>
-    <p>Posted: <%= time_ago_in_words(@listing.created_at) %></p>
-    <h1 class="listing-header"><%= @listing.title %></h1>
-    <div class="box">
-      <p>test</p>
+<% if user_signed_in? %>
+  <div class="container">
+    <div>
+      <button type="button">reply</button>
+      <p>Posted: <%= time_ago_in_words(@listing.created_at) %></p>
+      <h1 class="listing-header"><%= @listing.title %></h1>
+      <div class="box">
+        <p>test</p>
+      </div>
+      <p>
+          <%= @listing.description %>
+      </p>
     </div>
-    <p>
-        <%= @listing.description %>
-    </p>
-  </div>
-  <footer>
-    <p>post id: <%= @listing.id %></p>
-    <p>Author: <%= @listing.user.email %></p>
-    <p><%= time_ago_in_words(@listing.created_at) %></p>
-  </footer>
+    <footer>
+      <p>post id: <%= @listing.id %></p>
+      <p>Author: <%= @listing.user.email %></p>
+      <p><%= time_ago_in_words(@listing.created_at) %></p>
+    </footer>
+<% else %>
+  <div class="container">
+  <h1 class="listing-header">Please Register or Log In</h1>
+    <p>Only registered users can view listings, to avoid unsoliciated emails from non-students.</p>
+    <p>Please Log In or Register to view Listings</p>
+    <ul>
+      <li><a href="#"><%= link_to 'log in', new_user_session_path%></a></li>
+      <li><a href="#"><%= link_to 'create an account', new_user_registration_path %></li> 
+    </ul>
+<% end %>
 </div>
 
