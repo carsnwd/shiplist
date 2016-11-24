@@ -19,6 +19,7 @@
   </div>
   <footer>
     <p>post id: <%= @listing.id %></p>
+    <p>Author: <%= @listing.user.email %></p>
     <p><%= time_ago_in_words(@listing.created_at) %></p>
   </footer>
 </div>

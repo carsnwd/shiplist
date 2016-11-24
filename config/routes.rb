@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { sessions: "users/sessions" }
   get 'users/new'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -84,5 +85,4 @@ Rails.application.routes.draw do
   match '/terms', to: 'pages#terms', via: :get
   match '/subcategories/find_by_category', to: 'subcategories#find_by_category', via: :post
   match '/categories/:id', to: 'categories#show', via: :get
-  match '/signup', to: 'users#new', via: :get
 end

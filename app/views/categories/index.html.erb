@@ -2,8 +2,13 @@
   <div class="leftbar">
     <a href="#"><h1>shiplist</h1></a>
     <ul>
-      <a href="#"><%= link_to 'post a classifieds', new_listing_path %></a>
-      <li><a href="#"><%= link_to 'create an account', signup_path %></li>
+      <% if user_signed_in?%>
+        <li><a href="#"><%= link_to 'post a classifieds', new_listing_path %></a></li>
+        <li><a href="#"><%= link_to 'log out', destroy_user_session_path, :method => :delete %></li>
+      <% else %>
+        <li><a href="#"><%= link_to 'create an account', new_user_registration_path %></li> 
+        <li><a href="#"><%= link_to 'log in', new_user_session_path %></li>
+      <% end %>
     </ul>
       <p>search shiplist</p>
       <%= form_tag search_listings_path, :method => 'get' do %>
