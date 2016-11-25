@@ -1,28 +1,15 @@
-== README
+== SHIPLIST (Work in progress)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+= ABOUT
+This is a web application clone of Craigslist for Shippensburg University. It will give students a place to look for off-campus housing, roommates, and to buy and sell things. It will be exclusively for Ship students and local land lords who wish to post housing ads. 
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 2.2.5
+* Railse version: 4.2.6
+* PostgreSQL version: 9.5.5 (if it even matters)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+This is not a live application yet. I *hope* to have a live working version in the next few weeks, with minimal front-end design to start then work on that later.
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
