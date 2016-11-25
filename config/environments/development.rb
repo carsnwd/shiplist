@@ -42,5 +42,14 @@ Rails.application.configure do
   #URL option for the devise user authentication mailer
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => "gmail.com",
+    :user_name            => "shiplistconfrimation@gmail.com",
+    :password             => "PASSWORD", #Change this password to correct one
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+    # :enable_starttls_auto => true # I don't have this, but it should work anyway
+  }
 end
