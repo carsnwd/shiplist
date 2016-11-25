@@ -3,8 +3,6 @@
 = ABOUT
 This is a web application clone of Craigslist for Shippensburg University. A learning experience to learn how Ruby on Rails works. It will give students a place to look for off-campus housing, roommates, and to buy and sell things. It will be exclusively for Ship students and local land lords who wish to post housing ads. 
 
-Things you may want to cover:
-
 * Ruby version: 2.2.5
 * Railse version: 4.2.6
 * PostgreSQL version: 9.5.5 (if it even matters)
