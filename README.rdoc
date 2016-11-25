@@ -6,5 +6,6 @@ This is a web application clone of Craigslist for Shippensburg University. A lea
 * Ruby version: 2.2.5
 * Railse version: 4.2.6
 * PostgreSQL version: 9.5.5 (if it even matters)
+* Devise gem used for user authentication
 
-This is not a live application yet. I *hope* to have a live working version in the next few weeks, with minimal front-end design to start then work on that later.
+This is not a live application yet. I *hope* to have a live working version in the next few weeks, with minimal front-end design to start then work on that later. Something I've been chugging away at whenever I find the time. 
