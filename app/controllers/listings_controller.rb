@@ -1,5 +1,6 @@
 class ListingsController < ApplicationController
   #Defines a new listing with a user
+  before_action :authenticate_user!
   def new
     @listing = current_user.listings.build
   end
