@@ -9,3 +9,9 @@ This is a web application clone of Craigslist for Shippensburg University. A lea
 * Devise gem used for user authentication
 
 This is not a live application yet. I *hope* to have a live working version in the next few weeks, with minimal front-end design to start then work on that later. Something I've been chugging away at whenever I find the time. 
+
+=IMPORTANT! ENV FILE AND EMAIL PASSWORD FOR CONFIRMATION
+
+This program requires you to manually enter in the email and password for the confirmation email when you run it. It is stored as an ENV variable seperately to avoid sharing the email and password through my GitHub.
+
+It is stored in the /config/initializers/app_env_vars.rb file, which is included in my gitignore. 

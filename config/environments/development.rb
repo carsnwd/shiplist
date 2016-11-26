@@ -46,8 +46,8 @@ Rails.application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :domain               => "gmail.com",
-    :user_name            => "shiplistconfrimation@gmail.com",
-    :password             => "PASSWORD", #Change this password to correct one
+    :user_name            => ENV["AUTH_EMAIL"], #Located in YAML file that is not uploaded to GitHub, see README
+    :password             => ENV["AUTH_PASSWORD"], #Located in YAML file that is not uploaded to GitHub, see README
     :authentication       => "plain",
     :enable_starttls_auto => true
     # :enable_starttls_auto => true # I don't have this, but it should work anyway
