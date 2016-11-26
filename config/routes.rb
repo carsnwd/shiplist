@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: "users/sessions" }
+  #Alters the devise route to include repatcha stuff
+  devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions' }
   get 'users/new'
 
   # The priority is based upon order of creation: first created -> highest priority.

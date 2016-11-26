@@ -1,16 +1,24 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-# before_filter :configure_sign_up_params, only: [:create]
-# before_filter :configure_account_update_params, only: [:update]
+  # before_filter :configure_sign_up_params, only: [:create]
+  # before_filter :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
   # def new
   #   super
   # end
 
-  # POST /resource
-  # def create
-  #   super
-  # end
+  # POST /resource. Requires Captcha
+  def create
+    if verify_recaptcha
+      super
+    else
+      build_resource(sign_up_params)
+      clean_up_passwords(resource)
+      flash.now[:alert] = "There was an error with the recaptcha code below. Please re-enter the code."
+      flash.delete :recaptcha_error
+      render :new
+    end
+  end
 
   # GET /resource/edit
   # def edit

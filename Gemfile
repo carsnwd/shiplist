@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '3.4.1'
 #CSS frameworks 
 gem 'bootstrap-sass'
+#ReCaptcha
+gem "recaptcha", require: "recaptcha/rails"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
