@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
 
   validate :email_domain
 
+  #Requires users to have a certain email domain when registering 
   def email_domain
   	domain = email.split('@').last
   	if domain != "ship.edu"
