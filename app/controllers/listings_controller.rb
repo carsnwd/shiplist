@@ -31,13 +31,9 @@ class ListingsController < ApplicationController
     redirect_to root_url
   end
 
-  #Edit a listing
-  def edit
-  end
-
   #Params for listing defined
   private
   def listing_params
-    params.require(:listing).permit(:title, :description, :city, :state, :zipcode, :category_id, :subcategory_id)
+    params.require(:listing).permit(:title, :description, :contact, :category_id, :subcategory_id)
   end
 end
