@@ -22,7 +22,7 @@
       <p>Author: <%= @listing.user.email %></p>
       <p><%= time_ago_in_words(@listing.created_at) %></p>
       <% if current_user.email == @listing.user.email %>
-        <p>This is your listing.</p>
+        <%= button_to 'Delete', @listing, method: :delete, data: {confirm: "Are you sure?"} %>
       <% end %>
     </footer>
 </div>

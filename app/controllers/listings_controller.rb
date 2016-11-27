@@ -23,6 +23,18 @@ class ListingsController < ApplicationController
     @listings = Listing.search(params[:search])
   end
 
+  #Delete a listing
+  def destroy
+    @listing = Listing.find(params[:id])
+    @listing.destroy
+    flash[:success] = "Listing deleted"
+    redirect_to root_url
+  end
+
+  #Edit a listing
+  def edit
+  end
+
   #Params for listing defined
   private
   def listing_params
