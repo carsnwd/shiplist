@@ -28,6 +28,9 @@ gem 'devise', '3.4.1'
 gem 'bootstrap-sass'
 #ReCaptcha
 gem "recaptcha", require: "recaptcha/rails"
+#Leaflet.js gem
+gem 'leaflet-rails'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
