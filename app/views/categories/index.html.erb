@@ -1,15 +1,15 @@
 <nav class="navbar navbar-default navbar-static-top">
-  <div class="container-fluid">
+  <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">SHIP LIST</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in?%>
-      <li><a href="#"><%= link_to 'post ad', new_listing_path %></a></li>
-      <li><a href="#"><%= link_to 'log out', destroy_user_session_path, :method => :delete %></li>
+      <li><%= link_to 'post ad', new_listing_path %></li>
+      <li><%= link_to 'log out', destroy_user_session_path, :method => :delete %></li>
       <% else %>
-      <li><a href="#"><%= link_to 'sign up', new_user_registration_path %></li>
-      <li><a href="#"><%= link_to 'log in', new_user_session_path %></li>
+      <li><%= link_to 'sign up', new_user_registration_path %></li>
+      <li><%= link_to 'log in', new_user_session_path %></li>
       <% end %>
     </ul>
   </div>
