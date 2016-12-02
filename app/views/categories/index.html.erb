@@ -1,83 +1,78 @@
 <body>
   <center>
-    <a class="btn btn-large btn-danger" href="#">
-      <div class="image-wrap">
-        <%= image_tag image_url('housing.png')%>
-      </div>
-    </a>
-    <a class="btn btn-large btn-danger" href="#">
-      <div class="fa fa-user fa-6x" id="icons" aria-hidden="true"></div>
-      <div class="button-label">ROOMMATES</div>
-    </a>
-    <a class="btn btn-large btn-danger" href="#">
-      <div class="fa-6x" id="icons" aria-hidden="true">$</div>
-      <div class="button-label">BUY/SELL</div>
-    </a>
-  </center>
-
-  <div class="container">
-  <div class="leftbar">
-    <ul>
-    </ul>
+  <div class="image-wrap">
+    <%= link_to (image_tag image_url('housing.png')),  category_path(@housing), {:class => 'btn btn-large btn-danger'} %>
   </div>
-  <div class="center-column" >
-    <div class="center-one">
-      <table>
-        <tr>
-          <th class="table-header"><%= link_to 'housing', category_path(@housing)%></th>
-        </tr>
-        <tr>
-          <td>
-            <% @housing.subcategories.each do |subcategory| %>
-            <ul class="left-list">
-              <li><%= link_to subcategory.name, category_subcategory_path(@housing, subcategory) %></li>
-            </ul>
-            <% end %>
-          </td>
-        </tr>
-      </table>
-      <table>
-        <tr>
-          <th class="table-header"><%= link_to 'roommates', category_path(@roommates) %></th>
-        </tr>
-        <tr>
-          <td>
-            <% @roommates.subcategories.each do |subcategory| %>
-            <ul>
-              <li><%= link_to subcategory.name, category_subcategory_path(@roommates, subcategory) %></li>
-            </ul>
-            <% end %>
-          </td>
-        </tr>
-      </table>
-      <table>
-        <tr>
-          <th class="table-header"><%= link_to 'for sale', category_path(@forsale) %></th>
-        </tr>
-        <tr>
-          <td>
-            <% @forsale.subcategories.each do |subcategory| %>
-            <ul class="left-list">
-              <li><%= link_to subcategory.name, category_subcategory_path(@forsale, subcategory) %></li>
-            </ul>
-            <% end %>
-          </td>
-        </tr>
-      </table>
+  <div class="image-wrap">
+    <%= link_to (image_tag image_url('roommates.png')),  category_path(@roommates), {:class => 'btn btn-large btn-danger'} %>
+  </div>
+  <div class="image-wrap">
+    <%= link_to (image_tag image_url('buysell.png')),  category_path(@forsale), {:class => 'btn btn-large btn-danger'} %>
+  </div>
+  </center>
+  <div class="container">
+    <div class="leftbar">
+      <ul>
+      </ul>
+    </div>
+    <div class="center-column" >
+      <div class="center-one">
+        <table>
+          <tr>
+            <th class="table-header"><%= link_to 'housing', category_path(@housing)%></th>
+          </tr>
+          <tr>
+            <td>
+              <% @housing.subcategories.each do |subcategory| %>
+              <ul class="left-list">
+                <li><%= link_to subcategory.name, category_subcategory_path(@housing, subcategory) %></li>
+              </ul>
+              <% end %>
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th class="table-header"><%= link_to 'roommates', category_path(@roommates) %></th>
+          </tr>
+          <tr>
+            <td>
+              <% @roommates.subcategories.each do |subcategory| %>
+              <ul>
+                <li><%= link_to subcategory.name, category_subcategory_path(@roommates, subcategory) %></li>
+              </ul>
+              <% end %>
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th class="table-header"><%= link_to 'for sale', category_path(@forsale) %></th>
+          </tr>
+          <tr>
+            <td>
+              <% @forsale.subcategories.each do |subcategory| %>
+              <ul class="left-list">
+                <li><%= link_to subcategory.name, category_subcategory_path(@forsale, subcategory) %></li>
+              </ul>
+              <% end %>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="rightbar">
+      <!-- Links to the pages via routes match -->
+      <ul class="rightbar-top">
+        <!-- /help -->
+        <li><%= link_to 'help and faq', help_path%></li>
+        <li><%= link_to 'avoid scams and fraud', scams_path%></li>
+        <li><%= link_to 'personal safety tips', safety_path%></li>
+        <li class="rightbar-top"><%= link_to 'terms of use', terms_path%></li>
+        <li><%= link_to 'privacy policy', privacy_path%></li>
+        <li><%= link_to 'about shiplist', about_path%></li>
+        <li><%= link_to 'contact us', contact_path%></li>
+      </ul>
     </div>
   </div>
-  <div class="rightbar">
-    <!-- Links to the pages via routes match -->
-    <ul class="rightbar-top">
-      <!-- /help -->
-      <li><%= link_to 'help and faq', help_path%></li>
-      <li><%= link_to 'avoid scams and fraud', scams_path%></li>
-      <li><%= link_to 'personal safety tips', safety_path%></li>
-      <li class="rightbar-top"><%= link_to 'terms of use', terms_path%></li>
-      <li><%= link_to 'privacy policy', privacy_path%></li>
-      <li><%= link_to 'about shiplist', about_path%></li>
-      <li><%= link_to 'contact us', contact_path%></li>
-    </ul>
-  </div>
-</div>
 </body>
