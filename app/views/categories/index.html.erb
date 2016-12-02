@@ -3,13 +3,6 @@
     <a href="#"><h1>shiplist</h1></a>
     <ul>
     </ul>
-    <p>search shiplist</p>
-    <%= form_tag search_listings_path, :method => 'get' do %>
-    <p>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :name => nil %>
-    </p>
-    <% end %>
   </div>
   <div class="center-column" >
     <div class="center-one">
