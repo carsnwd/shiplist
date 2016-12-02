@@ -77,6 +77,12 @@ Index Buttons
 .btn-danger{
     margin-right: 20px !important;
 }
+
+.image-wrap img{
+    width: 25% !important;
+    height: 25% !important;
+}
+
 .fa-6x{
     font-size: 10em !important;
 }
