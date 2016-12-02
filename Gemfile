@@ -30,6 +30,8 @@ gem 'bootstrap-sass'
 gem "recaptcha", require: "recaptcha/rails"
 #Leaflet.js gem
 gem 'leaflet-rails'
+#Font-awesome
+gem 'font-awesome-sass'
 
 
 # Use ActiveModel has_secure_password
