@@ -1,3 +1,5 @@
+# Assists devise with displaying the proper flash messages
+# Sign up, log in, etc
 module DeviseHelper
 	def devise_error_messages!
 		if resource.errors.empty?
