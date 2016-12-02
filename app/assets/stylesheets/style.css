@@ -16,8 +16,28 @@ Navbar Styles
   border-color: #3f51b5;
 }
 
-.navbar-entire{
-  background-color: #3f51b5;
+.navbar-default{
+  font-family: Arial, Helvetica, sans-serif !important;
+  background-color: #3f51b5 !important;
+}
+
+.navbar-default .navbar-brand{
+  color: #FFFFFF !important;
+  font-weight: bold;
+  font-size: 20.5pt;
+}
+
+.navbar-default .navbar-brand:hover{
+  color: #ececec !important;
+}
+
+.navbar-default .navbar-right li a{
+  color: #FFFFFF !important;
+}
+
+.navbar-default .navbar-right li a:hover{
+  color: #FFFFFF !important;
+  color: #ececec !important;
 }
 
 /**********
