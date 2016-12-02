@@ -19,11 +19,11 @@
 				<li><%= link_to 'SIGN UP', new_user_registration_path %></li>
 				<li><%= link_to 'LOG IN', new_user_session_path %></li>
 				<% end %>
-				<li>				
+				<li>
 					<%= form_tag search_listings_path, :class => 'navbar-form', :method => 'get' do %>
 					<p>
-					<%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Search' %>
-					<%= submit_tag "Search", :class => 'btn btn-default', :type => "submit", :name => nil %>
+						<%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Search' %>
+						<%= submit_tag "Search", :class => 'btn btn-default', :type => "submit", :name => nil %>
 					</p>
 					<% end %>
 				</li>
@@ -34,4 +34,14 @@
 		<%= render 'layouts/messages' %>
 		<%= yield %>
 	</body>
+	<footer class="footer">
+		<p>
+			<%= link_to 'Help and Faq', help_path%> - 
+			<%= link_to 'Avoid Scams and Fraud', scams_path%> - 
+			<%= link_to 'Terms of Use', terms_path%> - 
+			<%= link_to 'Privacy Policy', privacy_path%> - 
+			<%= link_to 'About Shiplist', about_path%> - 
+			<%= link_to 'Contact Us', contact_path%>
+		</p>
+	</footer>
 </html>
