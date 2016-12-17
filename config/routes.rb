@@ -86,4 +86,5 @@ Rails.application.routes.draw do
   match '/terms', to: 'pages#terms', via: :get
   match '/subcategories/find_by_category', to: 'subcategories#find_by_category', via: :post
   match '/categories/:id', to: 'categories#show', via: :get
+  match '/map', to: 'pages#map', via: :get
 end

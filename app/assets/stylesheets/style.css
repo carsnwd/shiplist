@@ -117,3 +117,26 @@ Footer
 .footer a:hover{
     color: #AFAFAF !important;
 }
+
+/**********
+Login Page
+*********/
+.login-container{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+/**********
+Map
+**********/
+.map-container{
+  height: 100%;
+  margin: 2%;
+}
+
+#mapid{ 
+  height: 500px;
+  width: 100%;
+}

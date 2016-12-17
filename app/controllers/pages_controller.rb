@@ -21,4 +21,7 @@ class PagesController < ApplicationController
 
 	def contact
 	end
+
+	def map
+	end
 end

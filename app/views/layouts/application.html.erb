@@ -5,6 +5,8 @@
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 	</head>
 	<nav class="navbar navbar-default navbar-static-top">
 		<div class="container">
@@ -36,12 +38,28 @@
 	</body>
 	<footer class="footer">
 		<p>
-			<%= link_to 'Help and Faq', help_path%> - 
-			<%= link_to 'Avoid Scams and Fraud', scams_path%> - 
-			<%= link_to 'Terms of Use', terms_path%> - 
-			<%= link_to 'Privacy Policy', privacy_path%> - 
-			<%= link_to 'About Shiplist', about_path%> - 
+			<%= link_to 'Help and Faq', help_path%> -
+			<%= link_to 'Avoid Scams and Fraud', scams_path%> -
+			<%= link_to 'Terms of Use', terms_path%> -
+			<%= link_to 'Privacy Policy', privacy_path%> -
+			<%= link_to 'About Shiplist', about_path%> -
 			<%= link_to 'Contact Us', contact_path%>
 		</p>
 	</footer>
+	<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="loginmodal-container">
+				<h1>Login to Your Account</h1><br>
+				<form>
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				</form>
+				
+				<div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </html>
